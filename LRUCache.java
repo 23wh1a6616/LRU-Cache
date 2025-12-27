@@ -24,7 +24,6 @@ public class LRUCache {
         this.capacity = capacity;
         this.cache = new HashMap<>();
 
-        // Dummy head and tail
         head = new Node(0, 0);
         tail = new Node(0, 0);
 
@@ -32,13 +31,12 @@ public class LRUCache {
         tail.prev = head;
     }
 
-    // Remove a node from the doubly linked list
     private void remove(Node node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
     }
 
-    // Add node right after head (most recently used)
+
     private void addToFront(Node node) {
         node.next = head.next;
         node.prev = head;
@@ -73,20 +71,21 @@ public class LRUCache {
         }
     }
 
-    // ----------------- Testing -----------------
+    
     public static void main(String[] args) {
         LRUCache lru = new LRUCache(2);
 
         lru.put(1, 10);
         lru.put(2, 20);
-        System.out.println(lru.get(1)); // 10
+        System.out.println(lru.get(1)); 
 
-        lru.put(3, 30); // removes key 2
-        System.out.println(lru.get(2)); // -1
+        lru.put(3, 30); 
+        System.out.println(lru.get(2)); 
 
-        lru.put(4, 40); // removes key 1
-        System.out.println(lru.get(1)); // -1
+        lru.put(4, 40); 
+        System.out.println(lru.get(1)); 
         System.out.println(lru.get(3)); // 30
         System.out.println(lru.get(4)); // 40
     }
 }
+
