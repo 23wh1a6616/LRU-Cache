@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LRU Cache Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>LRU Cache</h1>
+
+<div class="controls">
+  <input id="capacity" placeholder="Capacity" type="number">
+  <button onclick="setCapacity()">Set Capacity</button>
+</div>
+
+<div class="controls">
+  <input id="key" placeholder="Key">
+  <input id="value" placeholder="Value">
+  <button onclick="put()">PUT</button>
+</div>
+
+<div class="controls">
+  <input id="getKey" placeholder="Key">
+  <button onclick="getValue()">GET</button>
+</div>
+
+<h3>Cache (LRU ------> MRU)</h3>
+<div id="cache"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
