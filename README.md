@@ -51,12 +51,10 @@ Option 2: Run a simple HTTP server (recommended)
 If you have Python installed:
 
 bash
-Copy code
+
 cd path/to/frontend
 # For Python 3
 python -m http.server 8000
 Then open your browser at:
 
-arduino
-Copy code
 http://localhost:8000
